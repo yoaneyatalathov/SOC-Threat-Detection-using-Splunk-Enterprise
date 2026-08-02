@@ -131,45 +131,63 @@ Both attack simulations successfully generated alerts and were handled through t
 
 # 📸 Project Screenshots
 
-## 1. Port Scan Simulation
+## 🔍 Use Case 1 – Port Scan Detection
 
-![Port Scan](screenshots/01-port-scan-nmap.png)
+### 1. Attack Simulation
+Port scanning was simulated using **Nmap** against the Windows target to generate Windows Security Log events.
 
----
-
-## 2. Port Scan Detection
-
-![Port Scan Detection](screenshots/02-port-scan-splunk.png)
+![Port Scan Simulation](screenshots/01-port-scan-nmap.png)
 
 ---
 
-## 3. Port Scan Alert
+### 2. Detection Result
+Splunk Enterprise analyzed Windows Security Log (Event ID 5157) and identified multiple connection attempts from the same source IP.
 
-![Port Scan Alert](screenshots/03-port-scan-alert.png)
-
----
-
-## 4. SQL Injection Simulation
-
-![SQL Injection](screenshots/04-sqli-dvwa.png)
+![Port Scan Detection](screenshots/02-port-scan-detection.png)
 
 ---
 
-## 5. SQL Injection Detection
+### 3. Dashboard Monitoring
+Splunk dashboard provides visualization of port scan activities for monitoring and investigation.
 
-![SQL Injection Detection](screenshots/05-sqli-splunk.png)
-
----
-
-## 6. SQL Injection Alert
-
-![SQL Injection Alert](screenshots/06-sqli-alert.png)
+![Port Scan Dashboard](screenshots/03-port-scan-dashboard.png)
 
 ---
 
-## 7. Splunk Dashboard
+### 4. Triggered Alert
+An automated alert was generated after the detection rule identified a potential port scanning activity.
 
-![Dashboard](screenshots/07-splunk-dashboard.png)
+![Port Scan Alert](screenshots/04-port-scan-alert.png)
+
+---
+
+# 💉 Use Case 2 – SQL Injection Detection
+
+### 1. Attack Simulation
+SQL Injection was simulated on the **Damn Vulnerable Web Application (DVWA)** using a malicious payload.
+
+![SQL Injection Simulation](screenshots/05-sqli-dvwa.png)
+
+---
+
+### 2. Detection Result
+Splunk Enterprise analyzed Apache Access Log and detected SQL Injection patterns based on predefined SPL rules.
+
+![SQL Injection Detection](screenshots/06-sqli-detection.png)
+
+---
+
+### 3. Dashboard Monitoring
+The dashboard visualizes SQL Injection events, making it easier for SOC analysts to monitor web application attacks.
+
+![SQL Injection Dashboard](screenshots/07-sqli-dashboard.png)
+
+---
+
+### 4. Triggered Alert
+Splunk automatically generated an alert after detecting SQL Injection activity from the Apache Access Log.
+
+![SQL Injection Alert](screenshots/08-sqli-alert.png)
 
 ---
 

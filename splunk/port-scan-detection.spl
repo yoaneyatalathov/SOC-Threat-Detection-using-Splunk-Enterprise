@@ -1,0 +1,10 @@
+index=main EventCode=5157
+| search SourceAddress!="127.0.0.1" SourceAddress!="::1"
+| stats latest(_time) as LastSeen dc(DestPort) as UniquePorts values(DestPort) as Ports count as ConnectionCount by SourceAddress
+| convert ctime(LastSeen)
+| where UniquePorts>=5
+| rename SourceAddress as "Source IP"
+| rename LastSeen as "Last Detected"
+| rename UniquePorts as "Unique Ports"
+| rename ConnectionCount as "Connection Count"
+| table "Last Detected" "Source IP" "Unique Ports" Ports "Connection Count"

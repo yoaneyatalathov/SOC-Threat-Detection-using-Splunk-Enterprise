@@ -1,3 +1,12 @@
+# ============================================================
+# Port Scan Detection Rule
+# Platform  : Splunk Enterprise
+# Log Source: Windows Security Log
+# Event ID  : 5157
+# Detection : Signature-Based
+# Author    : Muhammad Yoane Yatalathov
+# ============================================================
+
 index=main EventCode=5157
 | search SourceAddress!="127.0.0.1" SourceAddress!="::1"
 | stats latest(_time) as LastSeen dc(DestPort) as UniquePorts values(DestPort) as Ports count as ConnectionCount by SourceAddress

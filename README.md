@@ -131,14 +131,45 @@ Both attack simulations successfully generated alerts and were handled through t
 
 # 📸 Project Screenshots
 
-Included in this repository:
+## 1. Port Scan Simulation
 
-- Port Scan Simulation
-- SQL Injection Simulation
-- Splunk Dashboard
-- Triggered Alerts
-- Detection Queries
-- Incident Response Workflow
+![Port Scan](screenshots/01-port-scan-nmap.png)
+
+---
+
+## 2. Port Scan Detection
+
+![Port Scan Detection](screenshots/02-port-scan-splunk.png)
+
+---
+
+## 3. Port Scan Alert
+
+![Port Scan Alert](screenshots/03-port-scan-alert.png)
+
+---
+
+## 4. SQL Injection Simulation
+
+![SQL Injection](screenshots/04-sqli-dvwa.png)
+
+---
+
+## 5. SQL Injection Detection
+
+![SQL Injection Detection](screenshots/05-sqli-splunk.png)
+
+---
+
+## 6. SQL Injection Alert
+
+![SQL Injection Alert](screenshots/06-sqli-alert.png)
+
+---
+
+## 7. Splunk Dashboard
+
+![Dashboard](screenshots/07-splunk-dashboard.png)
 
 ---
 

@@ -1,3 +1,11 @@
+# ============================================================
+# SQL Injection Detection Rule
+# Platform  : Splunk Enterprise
+# Log Source: Apache Access Log (XAMPP)
+# Detection : Signature-Based
+# Author    : Muhammad Yoane Yatalathov
+# ============================================================
+
 source="C:\\xampp\\apache\\logs\\access.log"
 | search id="*%27*" OR id="*UNION*" OR id="*SELECT*" OR id="*information_schema*" OR id="*xp_cmdshell*" OR id="*sleep*" OR id="*benchmark*" OR id="*load_file*" OR id="*outfile*"
 | eval Attack_Type="SQL Injection"
